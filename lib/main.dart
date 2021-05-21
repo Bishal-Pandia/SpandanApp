@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
             fit: BoxFit.fill,
           ),
         ),
-        (_loginStatus==0)?SoccerApp():SignIn()
+        (_loginStatus==1)?SoccerApp():SignIn()
       ],),
       theme: ThemeData.light(),
       debugShowCheckedModeBanner: false,
@@ -67,10 +67,3 @@ class _MyAppState extends State<MyApp> {
     });
   }
 }
-
-
-
-//So as we can see w got our matches data,
-// the data size depend on the date and the time so
-// you can get as many data as many matches are curetly playing
-//Now let's try to get data by seasons and leagues
