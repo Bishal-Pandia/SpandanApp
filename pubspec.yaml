@@ -21,14 +21,14 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  logging: ^0.11.3+2
-  logging_appenders: ^0.2.2
+#  logging: ^0.11.3+2
+#  logging_appenders: ^0.2.2
 
   flutter:
     sdk: flutter
   http: ^0.12.2
-  http_multi_server: ^2.2.0
-  flutter_datetime_picker:
+#  http_multi_server: ^2.2.0
+#  flutter_datetime_picker:
   intl:
   webview_flutter:
   shared_preferences:

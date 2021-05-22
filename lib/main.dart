@@ -2,24 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:trial/screens/home.dart';
 import 'package:trial/screens/signin.dart';
 import 'package:trial/screens/signup.dart';
-import 'package:logging/logging.dart';
-import 'package:logging_appenders/logging_appenders.dart';
+// import 'package:logging/logging.dart';
+// import 'package:logging_appenders/logging_appenders.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-createLogger() {
-  Logger.root.level = Level.ALL;
-  LogzIoApiAppender (
-    apiToken: "iPKOkTIjgvqBtrbCHsdSwfflkqgFqgmU",
-    url: "https://listener.logz.io:8071",
-    labels: {
-      "version": "1.0.0", // dynamically later on
-      "build": "2" // dynamically later on
-    },
-  )..attachToLogger(Logger.root);
-}
+// createLogger() {
+//   Logger.root.level = Level.ALL;
+//   LogzIoApiAppender (
+//     apiToken: "iPKOkTIjgvqBtrbCHsdSwfflkqgFqgmU",
+//     url: "https://listener.logz.io:8071",
+//     labels: {
+//       "version": "1.0.0", // dynamically later on
+//       "build": "2" // dynamically later on
+//     },
+//   )..attachToLogger(Logger.root);
+// }
 void main() {
-  createLogger();
+  // createLogger();
   runApp(MaterialApp(home: MyApp(),));
 }
 
@@ -39,7 +39,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _logger = Logger('com.example.helloLogging');
+  // final _logger = Logger('com.example.helloLogging');
   @override
   void initState() {
     // TODO: implement initState
