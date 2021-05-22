@@ -2,7 +2,7 @@
 - name: Pull Docker image of spandan_app
   hosts: all
   vars:
-    ansible_python_interpreter: /usr/bin/python3
+    ansible_python_interpreter: /usr/bin/python
   tasks:
     - name: Pull image spandan_app
       docker_image:
