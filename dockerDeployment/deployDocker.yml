@@ -1,6 +1,7 @@
 ---
 - name: Pull Docker image of spandan_app
-  hosts: all
+  hosts: local
+  connection: local
   vars:
     ansible_python_interpreter: /usr/bin/python
   tasks:
