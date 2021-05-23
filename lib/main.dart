@@ -2,22 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:trial/screens/home.dart';
 import 'package:trial/screens/signin.dart';
 import 'package:trial/screens/signup.dart';
-// import 'package:logging/logging.dart';
-// import 'package:logging_appenders/logging_appenders.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:logging/logging.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:logging_appenders/logging_appenders.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-// createLogger() {
-//   Logger.root.level = Level.ALL;
-//   LogzIoApiAppender (
-//     apiToken: "iPKOkTIjgvqBtrbCHsdSwfflkqgFqgmU",
-//     url: "https://listener.logz.io:8071",
-//     labels: {
-//       "version": "1.0.0", // dynamically later on
-//       "build": "2" // dynamically later on
-//     },
-//   )..attachToLogger(Logger.root);
-// }
+createLogger() {
+  Logger.root.level = Level.ALL;
+  LogzIoApiAppender (
+    apiToken: "iPKOkTIjgvqBtrbCHsdSwfflkqgFqgmU",
+    url: "https://listener.logz.io:8071",
+    labels: {
+      "version": "1.0.0", // dynamically later on
+      "build": "2" // dynamically later on
+    },
+  )..attachToLogger(Logger.root);
+}
 void main() {
   // createLogger();
   runApp(MaterialApp(home: MyApp(),));
@@ -71,6 +73,7 @@ class _MyAppState extends State<MyApp> {
   }
   var _loginStatus=0;
   getPref() async {
+    // ignore: unused_local_variable
     SharedPreferences preferences = await SharedPreferences.getInstance();
     setState(() {
        //For logging in automatically, stores the log in status

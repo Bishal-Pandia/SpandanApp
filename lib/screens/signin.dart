@@ -5,8 +5,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:trial/apis/api.dart';
+// ignore: unused_import
 import 'package:trial/screens/signup.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:http/http.dart' as http;
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:logging/logging.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:logging_appenders/logging_appenders.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'home.dart';
@@ -17,6 +23,7 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   final _formKey = GlobalKey<FormState>();
+  final _logger = Logger('FirstLogger');
   String email ="", password ="";
   bool isLoading=false;
   TextEditingController _emailController=new TextEditingController();
@@ -143,6 +150,7 @@ class _SignInState extends State<SignIn> {
                             children: [
                               GestureDetector(
                                 onTap: () {
+                                  _logger.info("Has been tapped");
                                   if(isLoading)
                                     {
                                       return;
@@ -189,6 +197,7 @@ class _SignInState extends State<SignIn> {
                   ),
                   GestureDetector(
                     onTap: () {
+                      _logger.info("Going to signup from signin");
                       Navigator.pushReplacementNamed(context, "/signup");
                     },
                     child: Text(
